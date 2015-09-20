@@ -9,7 +9,7 @@ public class Example : Window
 {
     public Example()
     {
-        this.title = "Stack";
+        this.title = "StackSwitcher";
         this.destroy.connect(Gtk.main_quit);
 
         var grid = new Grid();

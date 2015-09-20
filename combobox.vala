@@ -10,7 +10,6 @@ public class Example : Window
 {
     private ListStore liststore;
     private ComboBox combobox;
-    private CellRendererText cellrenderertext;
 
     public Example()
     {
@@ -27,12 +26,13 @@ public class Example : Window
         liststore.append(out iter);
         liststore.set(iter, 0, "Novak Djokovic", -1);
 
-        cellrenderertext = new CellRendererText();
+        var cellrenderertext = new CellRendererText();
 
         combobox = new ComboBox();
         combobox.set_model(liststore);
         combobox.pack_start(cellrenderertext, true);
         combobox.add_attribute(cellrenderertext, "text", 0);
+        combobox.set_active(0);
         combobox.changed.connect(on_combobox_changed);
         this.add(combobox);
     }
