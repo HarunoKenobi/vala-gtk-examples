@@ -12,20 +12,17 @@ public class Example : Window
     public Example()
     {
         this.title = "ListBox";
-        this.set_default_size(200, 200);
         this.destroy.connect(Gtk.main_quit);
 
         var listbox = new ListBox();
         this.add(listbox);
 
-        var label1 = new Label("Label 1");
-        listbox.insert(label1, -1);
-
-        var label2 = new Label("Label 2");
-        listbox.insert(label2, -1);
-
-        var label3 = new Label("Label 3");
-        listbox.insert(label3, -1);
+        for (var i = 1; i < 10; i++)
+        {
+            string text = @"Label $i";
+            var label = new Label(text);
+            listbox.add(label);
+        }
     }
 
     public static int main(string[] args)

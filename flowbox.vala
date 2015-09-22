@@ -16,14 +16,12 @@ public class Example : Window
         var flowbox = new FlowBox();
         this.add(flowbox);
 
-        var button = new Button.with_label("Button in FlowBox");
-        flowbox.insert(button, 0);
-
-        var togglebutton = new ToggleButton.with_label("ToggleButton in FlowBox");
-        flowbox.insert(togglebutton, 1);
-
-        var checkbutton = new CheckButton.with_label("CheckButton in FlowBox");
-        flowbox.insert(checkbutton, -1);
+        for (var i = 1; i < 10; i++)
+        {
+            string text = @"Label $i";
+            var label = new Label(text);
+            flowbox.add(label);
+        }
     }
 
     public static int main(string[] args)
