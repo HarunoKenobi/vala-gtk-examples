@@ -5,12 +5,12 @@
 
 using Gtk;
 
-public class EntryExample : Window
+public class Example : Window
 {
     private Entry entry;
     private EntryBuffer entrybuffer;
 
-    public EntryExample()
+    public Example()
     {
         this.title = "EntryBuffer";
         this.destroy.connect(Gtk.main_quit);
@@ -38,7 +38,7 @@ public class EntryExample : Window
     {
         Gtk.init(ref args);
 
-        var window = new EntryExample();
+        var window = new Example();
         window.show_all();
 
         Gtk.main();
