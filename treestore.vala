@@ -1,6 +1,7 @@
 /*
- * A ListStore is used with view widgets using a model for data such as the
- * ComboBox and TreeView.
+ * A TreeStore is used with view widgets using a model for data such as the
+ * TreeView. It provides for items which can have children to be displayed in a
+ * tree-like fashion.
 */
 
 using Gtk;

@@ -8,7 +8,7 @@ using Gtk;
 
 public class Example : Window
 {
-    private ListStore liststore;
+    private Gtk.ListStore liststore;
     private ComboBox combobox;
 
     public Example()
@@ -16,7 +16,7 @@ public class Example : Window
         this.title = "ComboBox";
         this.destroy.connect(Gtk.main_quit);
 
-        liststore = new ListStore(1, typeof (string));
+        liststore = new Gtk.ListStore(1, typeof (string));
         Gtk.TreeIter iter;
 
         liststore.append(out iter);
@@ -39,11 +39,11 @@ public class Example : Window
 
     private void on_combobox_changed()
     {
-        Gtk.TreeIter iter;
+        Gtk.TreeIter treeiter;
         Value val;
 
-        combobox.get_active_iter(out iter);
-        liststore.get_value(iter, 0, out val);
+        combobox.get_active_iter(out treeiter);
+        liststore.get_value(treeiter, 0, out val);
 
         stdout.printf("Selection is '%s'\n", (string) val);
     }

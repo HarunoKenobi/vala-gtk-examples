@@ -27,7 +27,7 @@ public class Example : Window
         checkbutton.toggled.connect(on_show_text_toggled);
         grid.attach(checkbutton, 0, 1, 1, 1);
 
-        GLib.Timeout.add (500, progressbar_fill);
+        GLib.Timeout.add(500, progressbar_fill);
     }
 
     private bool progressbar_fill()

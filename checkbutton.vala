@@ -15,8 +15,7 @@ public class Example : Window
         this.title = "CheckButton";
         this.destroy.connect(Gtk.main_quit);
 
-        checkbutton = new CheckButton();
-        checkbutton.set_label("Toggle the CheckButton");
+        checkbutton = new CheckButton.with_label("CheckButton");
         checkbutton.toggled.connect(on_checkbutton_toggle);
         this.add(checkbutton);
     }

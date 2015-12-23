@@ -17,12 +17,10 @@ public class Example : Window
         var box = new Box(Gtk.Orientation.VERTICAL, 5);
         this.add(box);
 
-        button = new Button();
-        button.set_label("Button 1");
+        button = new Button.with_label("Button 1");
         button.clicked.connect(on_button_clicked);
         box.add(button);
-        button = new Button();
-        button.set_label("Button 2");
+        button = new Button.with_label("Button 2");
         button.clicked.connect(on_button_clicked);
         box.add(button);
     }
@@ -30,7 +28,7 @@ public class Example : Window
     private void on_button_clicked(Button button)
     {
         var label = button.get_label();
-        stdout.printf("%s clicked\n", label);
+        stdout.printf("%s was clicked!\n", label);
     }
 
     public static int main(string[] args)

@@ -23,15 +23,15 @@ public class Example : Window
 
         entry = new Entry();
         entry.set_buffer(entrybuffer);
-        grid.add(entry);
+        grid.attach(entry, 0, 0, 1, 1);
 
         entry = new Entry();
         entry.set_buffer(entrybuffer);
-        grid.add(entry);
+        grid.attach(entry, 0, 1, 1, 1);
 
         entry = new Entry();
         entry.set_buffer(entrybuffer);
-        grid.add(entry);
+        grid.attach(entry, 0, 2, 1, 1);
     }
 
     public static int main(string[] args)

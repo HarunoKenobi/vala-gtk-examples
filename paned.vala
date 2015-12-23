@@ -13,14 +13,19 @@ public class Example : Window
         this.title = "Paned";
         this.destroy.connect(Gtk.main_quit);
 
-        var paned = new Paned(Gtk.Orientation.VERTICAL);
-        this.add(paned);
+        var vpaned = new Paned(Gtk.Orientation.VERTICAL);
+        this.add(vpaned);
 
-        var label1 = new Label("Paned area 1");
-        paned.add1(label1);
+        var label1 = new Label("Paned Area 1");
+        vpaned.add1(label1);
 
-        var label2 = new Label("Paned area 2");
-        paned.add2(label2);
+        var hpaned = new Paned(Gtk.Orientation.HORIZONTAL);
+        vpaned.add2(hpaned);
+
+        var label2 = new Label("Paned Area 2");
+        hpaned.add1(label2);
+        var label3 = new Label("Paned Area 3");
+        hpaned.add2(label3);
     }
 
     public static int main(string[] args)
